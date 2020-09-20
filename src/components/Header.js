@@ -35,7 +35,9 @@ const Header = () => {
             </div>
 
             <div className="header__nav">
-                <Link to={!user && "/login"}>
+                <Link
+                    style={{textDecoration : "none"}}
+                    to={!user && "/login"}>
                     <div onClick={handleAuthentication}
                         className="header__option">
                         <span className="header__optionLineOne">{user?user.email:"Hello Guest"}</span>
@@ -50,7 +52,8 @@ const Header = () => {
                     <span className="header__optionLineOne">Your</span>
                     <span className="header__optionLineTwo">Prime</span>
                 </div>
-                <Link to={"/checkout"}>
+                <Link style={{textDecoration : "none"}}
+                    to={"/checkout"}>
                     <div className="header__optionBasket">
                         <ShoppingBasketIcon/>
                         <span className="header__optionLineTwo
